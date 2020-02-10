@@ -1,5 +1,6 @@
 # FishingJoy-XLua
 使用XLua预实现的热更新内容：
+
 version  1.1
 
 1.点击宝箱领取的金币钻石太拥挤，分散一点。
@@ -30,9 +31,9 @@ version  2.0
 3.切换场景。
 
 ————————————————————————
+
 Unity使用XLua的注意事项：
       首先开发业务代码->在所有可能出现问题的类上打上hotfix的标签，在所有lua调用CSharp的方法上打上LuaCallCSharp,在所有CSharp调用Lua的方法上打上CSharpCallLua->打包发布->修改bug时只需要更新Lua文件，修改资源时（声音，模型，贴图，图片，UI）只需要更新ab包。用户只需要去下载lua文件跟ab包。
-
       需要使用CSharp里面原先的代码需要将XLua提供的util.lua导入项目文件夹以及打包发给用户
 
 ————————————————————————
