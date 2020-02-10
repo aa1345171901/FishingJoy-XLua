@@ -1,5 +1,6 @@
 # FishingJoy-XLua
 使用XLua预实现的热更新内容：
+
 version  1.1
 
 1.点击宝箱领取的金币钻石太拥挤，分散一点。
@@ -30,16 +31,22 @@ version  2.0
 3.切换场景。
 
 ————————————————————————
-Unity使用XLua的注意事项：
-      首先开发业务代码->在所有可能出现问题的类上打上hotfix的标签，在所有lua调用CSharp的方法上打上LuaCallCSharp,在所有CSharp调用Lua的方法上打上CSharpCallLua->打包发布->修改bug时只需要更新Lua文件，修改资源时（声音，模型，贴图，图片，UI）只需要更新ab包。用户只需要去下载lua文件跟ab包。
 
-      需要使用CSharp里面原先的代码需要将XLua提供的util.lua导入项目文件夹以及打包发给用户
+Unity使用XLua的注意事项：
+
+   首先开发业务代码->在所有可能出现问题的类上打上hotfix的标签，在所有lua调用CSharp的方法上打上LuaCallCSharp,在所有CSharp调用Lua的方法上打上CSharpCallLua->打包发布->修改bug时只需要更新Lua文件，修改资源时（声音，模型，贴图，图片，UI）只需要更新ab包。用户只需要去下载lua文件跟ab包。
+      
+   需要使用CSharp里面原先的代码需要将XLua提供的util.lua导入项目文件夹以及打包发给用户
 
 ————————————————————————
 
 开发前做的环境配置：
+
 1.将官网提供的XLua-master文件中的Assets文件里的内容复制到工程的Assets文件夹下
+
 2.把XLua的宏打开，File-Build Settings->Player Settings->other Settings->Scriptsing Define Symbols 输入HOTFIX_ENABLE 按Enter
+
 3.将XLua-master中的Tools文件复制到项目的根目录。
+
 4.将Unity安装目录\Editor\Data\Managed中的Unity.Cecil.Pdb.dll, Unity.Cecil.Mdb.dll , Unity.Cecil.dll 三个文件 放入项目文件\AssetsXLua\Src\Editor\
 
